@@ -1,0 +1,11 @@
+
+v
+java:S1488"[Immediately return this expression instead of assigning it to the temporary variable "con".(ìÚªØüÿÿÿÿ
+>	java:S108")Either remove or fill this block of code.(ıàÑÎ
+=
+java:S1068	"'Remove this unused "url" private field.(µ¬¼š
+G
+java:S1068
+",Remove this unused "username" private field.(íïÌàùÿÿÿÿ
+G
+java:S1068",Remove this unused "password" private field.(»í££ûÿÿÿÿ

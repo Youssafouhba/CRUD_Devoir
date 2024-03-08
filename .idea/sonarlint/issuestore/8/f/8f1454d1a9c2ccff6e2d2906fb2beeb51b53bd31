@@ -1,0 +1,42 @@
+
+{
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(íµğıÿÿÿÿ8Ú›Ùöá1
+{
+java:S1450'"^Remove the "firstNameUInput" field and declare it as a local variable in the relevant methods.(Äã‚8€œÙöá1
+L
+java:S1948"/Make "clientService" transient or serializable.(ğñÇ¿8œÙöá1
+J
+java:S1948"(Make "client" transient or serializable.(ĞÆêÂüÿÿÿÿ8œÙöá1
+K
+java:S1948")Make "clients" transient or serializable.(íµğıÿÿÿÿ8œÙöá1
+R
+java:S1948"0Make "firstNameInput" transient or serializable.(’¶ğÊøÿÿÿÿ8œÙöá1
+N
+java:S1948"1Make "firstName1Input" transient or serializable.(Ù±š8‚œÙöá1
+L
+java:S1948"/Make "lastNameInput" transient or serializable.(·Úôü8‚œÙöá1
+H
+java:S1948 ",Make "emailInput" transient or serializable.(¦¥ü8‚œÙöá1
+N
+java:S1948!",Make "phoneInput" transient or serializable.(ÙÖ ûüÿÿÿÿ8‚œÙöá1
+Q
+java:S1948""/Make "passwordInput" transient or serializable.(šÅºÿÿÿÿÿ8‚œÙöá1
+L
+java:S1948$"0Make "selectedClient" transient or serializable.(Ã¨‘8‚œÙöá1
+P
+java:S1874"3Remove this use of "ManagedBean"; it is deprecated.(¡úÚï8„œÙöá1
+
+java:S1130="nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(¾¶şıÿÿÿÿ8œÙöá1
+‹
+java:S1130D"nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(Ï¹ù8˜œÙöá1
+
+java:S1130X"nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(¥“ÖŠşÿÿÿÿ8šœÙöá1
+G	java:S106Y"+Replace this use of System.out by a logger.(îâ±8™œÙöá1
+‹
+java:S1130]"nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(ÿ‡»®8ı»Ùöá1
+N
+java:S1068#",Remove this unused "editMode" private field.(õş”şÿÿÿÿ8§œÙöá1
+N
+java:S1068$"2Remove this unused "selectedClient" private field.(Ã¨‘8§œÙöá1
+P
+java:S1068'"3Remove this unused "firstNameUInput" private field.(Äã‚8©œÙöá1

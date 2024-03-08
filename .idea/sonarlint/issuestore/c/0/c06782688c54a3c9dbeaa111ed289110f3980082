@@ -1,0 +1,25 @@
+
+g	java:S112 "FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÿ…˜Åá1
+g	java:S1127"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÿ…˜Åá1
+g	java:S112O"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÿ…˜Åá1
+g	java:S112d"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÿ…˜Åá1
+g	java:S112u"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÿ…˜Åá1
+h	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8€†˜Åá1
+k
+java:S1192/"IDefine a constant instead of duplicating this literal "password" 3 times.(„«ßØùÿÿÿÿ8‚†˜Åá1
+g
+java:S1192,"JDefine a constant instead of duplicating this literal "firstname" 3 times.(ø×Ëù8ı°Æóá1
+c
+java:S11920"FDefine a constant instead of duplicating this literal "phone" 3 times.(ßŒã•8‚†˜Åá1
+c
+java:S1192."FDefine a constant instead of duplicating this literal "email" 3 times.(ø©ôÊ8‚†˜Åá1
+e
+java:S1192-"IDefine a constant instead of duplicating this literal "lastname" 3 times.(¡†°-8ş°Æóá1
+Z
+java:S1117("=Rename "resultSet" which hides the field declared at line 14.(„‡–8Æ†˜Åá1
+Z
+java:S1117@"=Rename "resultSet" which hides the field declared at line 14.(„‡–8Ë†˜Åá1
+Z
+java:S1117W"=Rename "resultSet" which hides the field declared at line 14.(„‡–8Ï†˜Åá1
+J
+java:S1068"-Remove this unused "resultSet" private field.(Şşö€8Ù†˜Åá1

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>User Table</title>
+    <h:outputStylesheet library="webjars" name="bootstrap/5.3.0/css/bootstrap.min.css"/>
+    <h:outputScript library="webjars" name="bootstrap/5.3.0/js/bootstrap.bundle.min.js"/>
+</h:head>
+<f:view >
+    <h:outputLabel>
+        <h:outputText value="#{flash.message.detail}" rendered="#{not empty flash.message}" />
+    </h:outputLabel>
+
+    <h:form id="languageForm">
+        <h:selectOneMenu value="#{languageBean.selectedLocale}" onchange="document.getElementById('languageForm:submitButton').click()">
+            <f:selectItem itemValue="en" itemLabel="English" />
+            <f:selectItem itemValue="fr" itemLabel="Français" />
+        </h:selectOneMenu>
+
+        <h:commandButton id="submitButton" style="display:none" action="#{languageBean.changeLocale}" />
+    </h:form>
+    <h:form>
+        <h:dataTable value="#{clientBean.clients}" var="client" styleClass="table table-primary table-striped-rows" rows="#{clientBean.pageSize}">
+
+            <h:column>
+                <f:facet name="header">#{msg.id}</f:facet>
+                <h:inputText value="#{client.id}" styleClass="form-control"  rendered="#{client.editable}" />
+                <h:outputText value="#{client.id}" styleClass="form-control"  rendered="#{!client.editable}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">#{msg.firstname}</f:facet>
+                <h:inputText value="#{client.firstname}" styleClass="form-control"  rendered="#{client.editable}" />
+                <h:outputText value="#{client.firstname}" styleClass="form-control" rendered="#{!client.editable}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">#{msg.lastname}</f:facet>
+                <h:inputText value="#{client.lastname}" styleClass="form-control"  rendered="#{client.editable}" />
+                <h:outputText value="#{client.lastname}" styleClass="form-control" rendered="#{!client.editable}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">#{msg.email}</f:facet>
+                <h:inputText value="#{client.email}" styleClass="form-control" rendered="#{client.editable}" />
+                <h:outputText value="#{client.email}" styleClass="form-control" rendered="#{!client.editable}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">#{msg.phone}</f:facet>
+                <h:inputText value="#{client.phone}" styleClass="form-control"  rendered="#{client.editable}" />
+                <h:outputText value="#{client.phone}" styleClass="form-control" rendered="#{!client.editable}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Actions :</f:facet>
+                <h:panelGroup style="display: flex;">
+                    <h:commandButton style="margin-left: 10px;" value="#{msg.updatebutton}" styleClass="btn btn-primary"
+                                     action="#{clientBean.toggleInputs(client)}" rendered="#{!client.editable}" />
+
+                    <h:commandButton style="margin-left: 10px;" value="#{msg.deletebutton}" styleClass="btn btn-danger"
+                                     action="#{clientBean.deleteClient(client.id)}" rendered="#{!client.editable}" />
+
+                    <h:commandButton value="#{msg.savebutton}" action="#{clientBean.updateClient(client)}" styleClass="btn btn-success" />
+
+                </h:panelGroup>
+            </h:column>
+        </h:dataTable>
+        <h:outputLabel style="margin-left: 400px;">
+            <h:outputText value="Page #{clientBean.currentPage} of #{clientBean.totalPages}" />
+            <h:commandLink value="#{msg.prevbutton}" action="#{clientBean.previousPage}" styleClass="btn btn-primary" rendered="#{clientBean.editableprevious}" style="margin-left: 20px" />
+            <h:commandLink value="#{msg.nextbutton}" action="#{clientBean.nextPage}" styleClass="btn btn-danger" rendered="#{clientBean.editablenext}" style="margin-left: 20px"/>
+        </h:outputLabel>
+    </h:form>
+
+    <h:form style="margin-left: 100px;position: relative;">
+        <h:commandButton value="#{msg.addbutton} Client" action="addclient" styleClass="btn btn-primary" />
+    </h:form>
+
+</f:view>
+</html>
