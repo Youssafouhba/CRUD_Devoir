@@ -5,7 +5,7 @@ COPY . /usr/src/app
 RUN mvn package
 
 FROM tomcat:10.1.18
-VOLUME /src
-ARG JAR_FILE=target/*.jar
+VOLUME /src/
+ARG JAR_FILE=/target/*.jar
 COPY ${JAR_FILE} hi.jar
 ENTRYPOINT ["java","-jar","hi.jar"]
