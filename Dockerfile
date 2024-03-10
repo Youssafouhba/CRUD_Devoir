@@ -1,20 +1,29 @@
-# Utilisez une image de base avec Java
-FROM openjdk:11
+# Use a multi-stage build for Maven dependencies
+FROM maven:3.8.4-openjdk-11 AS builder
 
-# Définissez le répertoire de travail dans le conteneur
+# Set the working directory
 WORKDIR /app
 
-# Copiez le fichier pom.xml dans le conteneur
+# Copy the pom.xml file to the container
 COPY pom.xml .
 
-# Exécutez la commande Maven pour télécharger les dépendances
+# Download the project dependencies
 RUN mvn dependency:go-offline -B
 
-# Copiez le reste des fichiers du projet dans le conteneur
+# Copy the project source code
 COPY src ./src
 
-# Compilez le projet
+# Build the application
 RUN mvn package
 
-# Définissez la commande par défaut pour exécuter l'application
-CMD ["java", "-war", "target/CRUD-1.0-SNAPSHOT.war"]
+# Create a new stage for the final image
+FROM openjdk:11
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the JAR file from the builder stage
+COPY --from=builder /target/target/CRUD-1.0-SNAPSHOT.war ./app.war
+
+# Set the command to run the application
+CMD ["java", "-war", "app.war"]
