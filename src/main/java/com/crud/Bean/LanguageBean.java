@@ -2,12 +2,11 @@ package com.crud.Bean;
 
 
 import jakarta.annotation.PostConstruct;
-import jakarta.enterprise.context.RequestScoped;
 import jakarta.faces.application.FacesMessage;
-import jakarta.faces.bean.ManagedBean;
 import jakarta.faces.bean.SessionScoped;
 import jakarta.faces.context.FacesContext;
 import jakarta.inject.Named;
+import jakarta.servlet.http.HttpServletRequest;
 
 import java.util.Locale;
 
@@ -19,7 +18,12 @@ public class LanguageBean {
 
     @PostConstruct
     public void init() {
-        FacesContext.getCurrentInstance().getViewRoot().getLocale();
+        String clientLanguage = FacesContext.getCurrentInstance().getExternalContext().getRequestLocale().getLanguage();
+        // Créer l'objet Locale correspondant
+        locale = new Locale(clientLanguage);
+
+
+        selectedLocale=clientLanguage;
     }
 
     public Locale getLocale() {
@@ -52,6 +56,10 @@ public class LanguageBean {
         }
 
     }
-
+    public String getLocaleFromRequest() {
+        FacesContext facesContext = FacesContext.getCurrentInstance();
+        HttpServletRequest request = (HttpServletRequest) facesContext.getExternalContext().getRequest();
+        return request.getHeader("Accept-Language");
+    }
 
 }

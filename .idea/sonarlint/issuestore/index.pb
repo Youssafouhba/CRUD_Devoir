@@ -31,8 +31,6 @@ K
 -src/main/java/com/crud/Bean/languageBean.java,9\e\9e54b73fed46d1ba514aeacdeabae8472e1cf17e
 ]
 -src/main/java/com/crud/Bean/LanguageBean.java,5\4\54608e3ded26a62f316a3ed3886a6fad9fa5d9d5
-g
-7src/main/java/com/crud/InternationalizationExample.java,7\a\7a6a4addffea37b87dd38d3030c262a5ff1128f0
 8
 mvnw.cmd,1\f\1f1763f358c257ea3515417352b82b0165647ad1
 :
@@ -78,3 +76,15 @@ G.idea/sonarlint/issuestore/9/2/921ab541b29cd2aba50bbba38a0af79890ebe16a,d\6\d6
 Q.idea/sonarlint/securityhotspotstore/9/1/91a101fc1e8a96bad757fca120fa8f8d1962e279,e\2\e2b1b199dde09cb18b3b2249df3d1c57da46e689
 Å
 Q.idea/sonarlint/securityhotspotstore/5/0/50151d7bbdb888d7f0016c938d7aa16795ba543d,4\5\456f7e888212c468e2a954c38ceeda871de20c7b
+J
+src/main/webapp/styles.css,a\5\a528d543f5b88a435b4532b41af24e79b3ccc297
+h
+8src/main/java/com/crud/Validators/FirstNameValidtor.java,7\1\7106dbc92d64f2428a4b1aaf85172d0130ac8978
+h
+8src/main/java/com/crud/Validators/LasteNameValidtor.java,b\a\ba5e972ca71ea96452ca34cb93ceb42bbe2b6943
+d
+4src/main/java/com/crud/Validators/PhoneValidtor.java,b\0\b064770f4f2344c98dd46e068ffb30329fa3a97c
+c
+3src/main/java/com/crud/Validators/DateValidtor.java,4\5\457bb30b1b2fef46146173ff0a7a58a7c6a396f6
+g
+7src/main/java/com/crud/Validators/PasswordValidtor.java,0\d\0d22f55fab8f4dff22b96121924b0ca0e7a7a167

@@ -11,61 +11,50 @@
 
 <h:body>
    <f:view>
-      <div class="container" style="margin-top: 15%;">
-         <h:form styleClass="needs-validation" novalidate="true">
+      <div class="container" style="position:absolute;left: 70%;margin-top: 2%" >
+         <h:outputText style="font-size: 20px;margin-left: 100px;" value="Add New Client" rendered="false"/>
+         <h:form styleClass="needs-validation" novalidate="true" rendered="false">
+
             <div class="row g-3">
-               <div class="col-md-6">
-                  <label for="firstName" class="form-label">First Name</label>
-                  <h:inputText id="firstName" styleClass="form-control" required="true" binding="#{clientBean.firstNameInput}" />
+               <div class="col-md-6" style="width: 400px;">
+
+                  <div class="msger">
+                     <label for="firstName" class="form-label">#{msg.firstname}</label>
+                     <h:message errorStyle="color: orangered;float: right;" for="firstName" />
+                  </div>
+                  <h:inputText id="firstName" value="#{clientBean.client.firstname}" styleClass="form-control"  binding="#{clientBean.firstNameInput}" required="true" validator="custom.firstNameValidator"   requiredMessage="#{msg.firstnameerrror}"/>
+
+                  <div class="msger">
+                     <label for="lastName" class="form-label">#{msg.lastname}</label>
+                     <h:message errorStyle="color: orangered;float: right;" for="lastName" />
+                  </div>
+
+                  <h:inputText id="lastName" value="#{clientBean.client.lastname}" styleClass="form-control"  binding="#{clientBean.lastNameInput}" required="true" requiredMessage="#{msg.lastnameerrror}" validator="custom.lastNameValidator" />
+                  <div class="msger" >
+                     <label for="email" class="form-label">#{msg.email}</label>
+                     <h:message errorStyle="color: orangered;float: right;" for="email" />
+                  </div>
+                  <h:inputText id="email" value="#{clientBean.client.email}" styleClass="form-control"  binding="#{clientBean.emailInput}" required="true" validator="custom.emailValidator" requiredMessage="#{msg.emailerrror}" />
+
+                  <div class="msger" >
+                     <label for="phone" class="form-label">#{msg.phone}</label>
+
+                     <h:message errorStyle="color: orangered;float: right;" for="phone" />
+                  </div>
+                  <h:inputText id="phone" value="#{clientBean.client.phone}" styleClass="form-control"  binding="#{clientBean.phoneInput}" required="true" requiredMessage="#{msg.phoneerrror}" validator="custom.phoneNumberValidator" />
+
+
+
+                  <div class="msger">
+                     <label for="password" class="form-label">#{msg.password}</label>
+                     <h:message errorStyle="color: orangered;float: right;" for="password" />
+                  </div>
+                  <h:inputText id="password" value="#{clientBean.client.password}" styleClass="form-control" required="true" requiredMessage="#{msg.passworderrror}" validator="custom.passwordValidator" binding="#{clientBean.passwordInput}" />
 
                </div>
-               <div class="col-md-6">
-                  <label for="lastName" class="form-label">Last Name</label>
-                  <h:inputText id="lastName" styleClass="form-control" required="true" binding="#{clientBean.lastNameInput}" />
-                  <div class="invalid-feedback">
-                     <h:message for="lastName" />
-                     Please provide a valid last name.
-                  </div>
-               </div>
-            </div>
-            <div class="row g-3">
-               <div class="col-md-6">
-                  <label for="email" class="form-label">Email</label>
-                  <h:inputText id="email" styleClass="form-control" required="true" binding="#{clientBean.emailInput}" >
-                     <f:validator validatorId="custom.emailValidator"/>
-                  </h:inputText>
-                  <div class="invalid-feedback">
-                     <h:message for="email" />
-                     Please provide a valid email.
-                  </div>
-               </div>
-               <div class="col-md-6">
-                  <label for="phone" class="form-label">Phone</label>
-                  <h:inputText id="phone" styleClass="form-control" required="true" binding="#{clientBean.phoneInput}" />
-                  <div class="invalid-feedback">
-                     <h:message for="phone" />
-                     Please provide a valid phone number.
-                  </div>
-               </div>
-            </div>
-            <div class="row g-3">
-               <div class="col-md-6">
-                  <label for="password" class="form-label">Password</label>
-                  <h:inputText id="password" styleClass="form-control" required="true" binding="#{clientBean.passwordInput}" />
-                  <div class="invalid-feedback">
-                     <h:message for="password" />
-                     Please provide a valid password.
-                  </div>
-               </div>
-            </div>
-            <div class="row g-3" style="margin-top: 10px;">
                <div class="col-md-12" >
-                  <div class="invalid-feedback">
-                     <h:message for="firstName" />
-                     Please provide a valid first name.
-                  </div>
-
-                  <h:commandButton value="Submit" action="#{clientBean.createClient()}" styleClass="btn btn-primary" />
+                  <h:commandButton value="#{msg.subbutton}"  styleClass="btn btn-primary"/>
+                  <h:commandButton value="#{msg.reteurbutton}" action="#{clientBean.annuler}"  styleClass="btn btn-primary" />
                   <h:messages globalOnly="true" />
                </div>
             </div>

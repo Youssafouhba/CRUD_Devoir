@@ -17,11 +17,26 @@
         <validator-id>custom.emailValidator</validator-id>
         <validator-class>com.crud.Validators.EmailValidator</validator-class>
     </validator>
+    <validator>
+        <validator-id>custom.passwordValidator</validator-id>
+        <validator-class>com.crud.Validators.PasswordValidtor</validator-class>
+    </validator>
+    <validator>
+        <validator-id>custom.firstNameValidator</validator-id>
+        <validator-class>com.crud.Validators.FirstNameValidtor</validator-class>
+    </validator>
+    <validator>
+        <validator-id>custom.lastNameValidator</validator-id>
+        <validator-class>com.crud.Validators.LasteNameValidtor</validator-class>
+    </validator>
+    <validator>
+        <validator-id>custom.phoneNumberValidator</validator-id>
+        <validator-class>com.crud.Validators.PhoneValidtor</validator-class>
+    </validator>
     <application>
         <locale-config>
-            <default-locale>en</default-locale>
-            <supported-locale>en</supported-locale>
             <supported-locale>fr</supported-locale>
+            <supported-locale>en</supported-locale>
         </locale-config>
         <resource-bundle>
             <base-name>messages</base-name>

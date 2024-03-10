@@ -8,7 +8,7 @@ public class Client {
     private String password;
     private String phone;
     private  boolean editable;
-
+    private boolean newbutton;
 
     public Client(String firstname,String lastname, String email, String password,String phone) {
         this.firstname = firstname;
@@ -96,5 +96,13 @@ public class Client {
 
     public void toggleInputs() {
         this.editable = !this.editable;
+    }
+
+    public boolean isNewbutton() {
+        return newbutton;
+    }
+
+    public void setNewbutton(boolean newbutton) {
+        this.newbutton = newbutton;
     }
 }
