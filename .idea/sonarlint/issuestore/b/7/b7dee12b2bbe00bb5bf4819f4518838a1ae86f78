@@ -1,11 +1,12 @@
 
 v
-java:S1488"[Immediately return this expression instead of assigning it to the temporary variable "con".(ìÚªØüÿÿÿÿ
->	java:S108")Either remove or fill this block of code.(ıàÑÎ
-=
-java:S1068	"'Remove this unused "url" private field.(µ¬¼š
-G
+java:S1488"[Immediately return this expression instead of assigning it to the temporary variable "con".(¸·íøÿÿÿÿ
+E	java:S108")Either remove or fill this block of code.(ıàÑÎ8çá¨Òâ1
+D
+java:S1068	"'Remove this unused "url" private field.(µ¬¼š8êá¨Òâ1
+N
 java:S1068
-",Remove this unused "username" private field.(íïÌàùÿÿÿÿ
-G
-java:S1068",Remove this unused "password" private field.(»í££ûÿÿÿÿ
+",Remove this unused "username" private field.(íïÌàùÿÿÿÿ8ëá¨Òâ1
+N
+java:S1068",Remove this unused "password" private field.(»í££ûÿÿÿÿ8îá¨Òâ1
+msecrets:S6703"HMake sure this database password gets changed and removed from the code.(¸·íøÿÿÿÿ8ôÅ‹ìâ1

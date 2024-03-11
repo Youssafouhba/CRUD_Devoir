@@ -2,8 +2,6 @@
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 X
-(src/main/java/com/crud/HelloServlet.java,9\1\91a101fc1e8a96bad757fca120fa8f8d1962e279
-X
 (src/main/java/com/crud/Model/Client.java,1\6\16b49f11e431b8aba417c138aa313a4e91b566e1
 S
 #src/main/java/com/crud/DAO/Dao.java,a\9\a99845d18da409e3dc7df3d8425be0f94613a534
@@ -72,8 +70,6 @@ Q.idea/sonarlint/securityhotspotstore/2/d/2d32401054c9d3220e765b39282ec77a179111
 Q.idea/sonarlint/securityhotspotstore/1/6/16b49f11e431b8aba417c138aa313a4e91b566e1,3\6\36f2aea94e7db67c64d02206edba178e486f6cb5
 w
 G.idea/sonarlint/issuestore/9/2/921ab541b29cd2aba50bbba38a0af79890ebe16a,d\6\d67405d29eb44ea9c03482c40eb23a139d3e628c
-Å
-Q.idea/sonarlint/securityhotspotstore/9/1/91a101fc1e8a96bad757fca120fa8f8d1962e279,e\2\e2b1b199dde09cb18b3b2249df3d1c57da46e689
 Å
 Q.idea/sonarlint/securityhotspotstore/5/0/50151d7bbdb888d7f0016c938d7aa16795ba543d,4\5\456f7e888212c468e2a954c38ceeda871de20c7b
 J
