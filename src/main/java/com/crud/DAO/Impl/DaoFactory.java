@@ -21,10 +21,10 @@ public class DaoFactory {
         } catch (ClassNotFoundException e) {
 
         }
-        return new DaoFactory("jdbc:mysql://mysql-2c3b7474-youssefouhba-1406.a.aivencloud.com:23229/hi", "avnadmin", "AVNS_hdj58afUSowWP3eu2GF");
+        return new DaoFactory("jdbc:mysql://localhost:3306/hi", "root", "");
     }
     public Connection getConnection() throws SQLException {
-        Connection con = DriverManager.getConnection("jdbc:mysql://mysql-2c3b7474-youssefouhba-1406.a.aivencloud.com:23229/hi?user=avnadmin&password=AVNS_hdj58afUSowWP3eu2GF");
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/hi?user=root");
         return con;
     }
 }
