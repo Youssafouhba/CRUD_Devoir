@@ -1,7 +1,4 @@
 FROM tomcat:10-jdk11-openjdk
-WORKDIR /app
-COPY . /app/
-RUN mvn clean package
 
 WORKDIR /app
 COPY /app/target/*.jar /app/app.jar
