@@ -8,6 +8,7 @@
     <artifactId>CRUD</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>CRUD</name>
+
     <packaging>jar</packaging>
 
     <properties>
