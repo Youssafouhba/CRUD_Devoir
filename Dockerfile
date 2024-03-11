@@ -1,14 +1,7 @@
-FROM maven:3.8.4-openjdk-17 AS builder
+FROM tomcat:10-jdk11-openjdk
 
-# Définissez le répertoire de travail dans le conteneur
-WORKDIR /app
-COPY . /app/
-RUN mvn clean package
+COPY ./target/*.war /usr/local/tomcat/webapps/ROOT.war
 
-#
-FROM openjdk:17-alpine
-# Définissez le répertoire de travail dans le conteneur
-WORKDIR /app
-COPY --from=builder /app/target/*.jar /app/app.jar
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","app.jar"]
+
+CMD ["catalina.sh", "run"]
